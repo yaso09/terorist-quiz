@@ -29,14 +29,16 @@ body {
     aspect-ratio: 3 / 4;
   }
 
-  .answer-button {
+  .answer-button, #reset-button {
     margin: 5px;
     padding: 10px 20px;
     border-radius: 8px;
     background: #0062b3;
+    color: #fff;
+    border: 0;
     font-size: 16px;
     cursor: pointer;
-  } .answer-button:hover {
+  } .answer-button:hover, #reset-button:hover {
     background: #004a87;
   }
 
