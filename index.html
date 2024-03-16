@@ -31,7 +31,7 @@
       <div id="scoreboard" class="scoreboard">Doğru: 0 | Yanlış: 0</div>
       <br/>
       <div id="second">
-        <button id="reset-button">Skoru Sıfırla</button>
+        <button id="reset-button2">Skoru Sıfırla</button>
         <br/>
         <h2>Sivilleri Ekle</h2>
         <label class="switch">
@@ -61,6 +61,12 @@
       }
   });
 
+  document.getElementById('reset-button2').addEventListener('click', function() {
+    correctScore = 0;
+    incorrectScore = 0;
+    totalQuestionsAnswered = 0;
+    updateScoreboard();
+  });
 
   document.getElementById('reset-button').addEventListener('click', function() {
     correctScore = 0;
