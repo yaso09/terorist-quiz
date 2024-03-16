@@ -1,2 +1,3 @@
-# terorist-quiz
-teroristini dogru tani turkiye
+# İmtahan-ı Hain
+| https://imtahanihain.vercel.app/
+Terorist Quiz modu.
