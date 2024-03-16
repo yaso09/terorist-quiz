@@ -32,8 +32,12 @@ body {
   .answer-button {
     margin: 5px;
     padding: 10px 20px;
+    border-radius: 8px;
+    background: #0062b3;
     font-size: 16px;
     cursor: pointer;
+  } .answer-button:hover {
+    background: #004a87;
   }
 
   .scoreboard {
