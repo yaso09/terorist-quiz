@@ -163,7 +163,7 @@
     const allAnswers = [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5);
     const quizContainer = document.getElementById('quiz-container');
 
-    quizContainer.innerHTML = `<h1>Hangi örgüt?</h1><div class="image-container">
+    quizContainer.innerHTML = `<h1>Hangi örgüt?</h1><small>Yasir Eymen & Osumatu</small><br><div class="image-container">
       <img src="${currentTerrorist.IlkGorselURL}" alt="Terrorist Image">
     </div>
     ${allAnswers.map(answer => `<button class="answer-button" onclick="checkAnswer('${correctAnswer}', '${answer}')">${answer}</button>`).join('')}
