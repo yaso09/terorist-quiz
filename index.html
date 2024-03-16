@@ -16,12 +16,11 @@
     <small>
       Geliştiren, Yasir Eymen & Aslı, osumatu
     </small><br><br><br>
-    <button id="reset-button">Skoru Sıfırla</button>
-      <br/>
-      <h2>Sivilleri Ekle</h2>
-      <label class="switch">
-        <input type="checkbox" id="include-civilians-toggle" onchange="toggleIncludeCivilians()" checked>
-        <span class="slider round"></span>
+    &nbsp;&nbsp;&nbsp;<button id="reset-button">Skoru Sıfırla</button><br/>
+    &nbsp;&nbsp;&nbsp;<h2>Sivilleri Ekle</h2>
+    &nbsp;&nbsp;&nbsp;<label class="switch">
+    &nbsp;&nbsp;&nbsp;<input type="checkbox" id="include-civilians-toggle" onchange="toggleIncludeCivilians()" checked>
+    &nbsp;&nbsp;&nbsp;<span class="slider round"></span>
     </label>
     <small><small>Veriler herkese açık olarak yayınlanan <a href="https://www.terorarananlar.pol.tr/tarananlar/" target="_blank">T.C. İçişleri Bakanlığı Terör Arananlar</a> listesinden alınmaktadır.
     Sivillerin fotoğrafları yapay zeka ile insan fotoğrafı üreten <a target="_blank" href="https://thispersondoesnotexist.com">https://thispersondoesnotexist.com</a> adresinden alınmaktadır.</small></small>
@@ -43,6 +42,14 @@
     </div>
   </center>
 <script>document.querySelector("#second").style.display = "none";
+
+  if ($(this).width() < 960) {
+    document.querySelector(".left-bar").style.display = "none";
+    document.querySelector("#second").style.display = "block";
+  } else {
+    document.querySelector(".left-bar").style.display = "block";
+    document.querySelector("#second").style.display = "none";
+  }
 
   $(window).resize(function() {
       if ($(this).width() < 960) {
