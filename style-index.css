@@ -5,6 +5,14 @@ body {
     padding: 0;
   }
 
+  .left-bar {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+  }
+
   .container {
     max-width: 600px;
     margin: 0 auto;
