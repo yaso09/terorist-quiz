@@ -15,7 +15,14 @@
     <h2>İmtahan-ı Hain</h2>
     <small>
       Geliştiren, Yasir Eymen & Aslı, osumatu
-    </small>
+    </small><br><br><br>
+    <button id="reset-button">Skoru Sıfırla</button>
+      <br/>
+      <h2>Sivilleri Ekle</h2>
+      <label class="switch">
+        <input type="checkbox" id="include-civilians-toggle" onchange="toggleIncludeCivilians()" checked>
+        <span class="slider round"></span>
+    </label>
     <small><small>Veriler herkese açık olarak yayınlanan <a href="https://www.terorarananlar.pol.tr/tarananlar/" target="_blank">T.C. İçişleri Bakanlığı Terör Arananlar</a> listesinden alınmaktadır.
     Sivillerin fotoğrafları yapay zeka ile insan fotoğrafı üreten <a target="_blank" href="https://thispersondoesnotexist.com">https://thispersondoesnotexist.com</a> adresinden alınmaktadır.</small></small>
   </div>
@@ -24,20 +31,27 @@
       <div id="quiz-container"></div>
       <div id="scoreboard" class="scoreboard">Doğru: 0 | Yanlış: 0</div>
       <br/>
-      <button id="reset-button">Skoru Sıfırla</button>
-      <br/>
-      <h2>Sivilleri Ekle</h2>
-      <label class="switch">
-        <input type="checkbox" id="include-civilians-toggle" onchange="toggleIncludeCivilians()" checked>
-        <span class="slider round"></span>
-      </label>
+      <div id="second">
+        <button id="reset-button">Skoru Sıfırla</button>
+        <br/>
+        <h2>Sivilleri Ekle</h2>
+        <label class="switch">
+          <input type="checkbox" id="include-civilians-toggle" onchange="toggleIncludeCivilians()" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
   </center>
-<script>
+<script>document.querySelector("#second").style.display = "none";
 
   $(window).resize(function() {
-      if ($(this).width > 960)
+      if ($(this).width > 960) {
+        document.querySelector(".left-bar").style.display = "none";
+        document.querySelector("#second").style.display = "block";
+      } else {
         document.querySelector(".left-bar").style.display = "block";
+        document.querySelector("#second").style.display = "none";
+      }
   });
 
 
